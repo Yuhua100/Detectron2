@@ -33,3 +33,40 @@ To:
 - Serve as a reference for others interested in Detectron2 setup
 
 ---
+
+## 🧩 Step-by-Step 安裝教學 (Step-by-Step Installation Guide)
+
+本節說明如何在 Windows 上從零開始安裝 Detectron2 並執行推論範例。
+
+This section explains how to install Detectron2 from scratch on Windows and run a sample inference.
+
+---
+
+### 🔧 Step 1：建立 Conda 環境 (Create Conda Environment)
+
+```bash 
+conda create -n detectron_env python=3.8 -y #建立虛擬環境 python版本為3.8
+conda activate detectron_env #啟用虛擬環境
+
+---
+
+### 📦 Step 2：安裝 PyTorch + CUDA（GPU）
+
+```bash 
+conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch #下載需要的版本
+
+---
+
+### 📁 Step 3：Clone Detectron2 原始碼
+
+```bash 
+git clone https://github.com/facebookresearch/detectron2.git
+cd detectron2
+
+---
+
+###  📌 Step 4：安裝相關依賴套件
+
+```bash 
+pip install -e .
+pip install opencv-python
